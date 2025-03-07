@@ -6,8 +6,6 @@ from fastapi.encoders import jsonable_encoder
 import logging
 import os
 # 进行日志配置
-logging_config.setup_logging()
-logger = logging.getLogger(__name__)
 
 api_router = APIRouter()
 

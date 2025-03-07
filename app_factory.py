@@ -2,9 +2,10 @@ from fastapi import FastAPI
 from celery import Celery
 from config import get_settings
 
-def create_celery(settings) -> Celery:
+def create_celery() -> Celery:
     # 尝试创建Celery实例
     try:
+        settings = get_settings()
         # 创建Celery实例，传入应用名称、结果后端和消息代理
         celery = Celery(
             settings.APP_NAME,
